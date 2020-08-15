@@ -19,34 +19,52 @@
         .subheading{line-height:0em;}
         .columncount{column-count:3;column-gap:10px;font-size:1.1em;line-height:1.3em}
         h3{font-size:1.5em;}
-        ul{
-            list-style-type:none;
-            margin:0;
-            padding:0;
-            overflow:hidden;
-        }
-        li{
-            float:left;
-        }
-        li a{
-            display:block;
-            padding:8px;
-            baclground-color:#ddddd;
-        }
+        
+        /* Centered section inside the top navigation */
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+.topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
         
     </style>
     </head>
     <STYLE>A {text-decoration: none;} </STYLE>
     <body>
         <h1 style="text-align:center">DrugReport</h1>
-        <ul>
-            <li><a href="#COVID-19 NEWS">COVID-19 NEWS CENTRAL</a></li>
-            <li><a href="#DRUG NEWS">DRUG NEWS</a></li>
-            <li><a href="#NEW DRUG APPROVALS">NEW DRUG APPROVALS</a></li>
-            <li><a href="#MEDICAL WEBSITES">NEW DRUG APPROVALS</a></li>
-            <li><a href="#MEDICAL JOURNALS">MEDICAL JOURNALS</a></li>
-            <li><a href="#DOCTOR REVIEWS">DOCTOR REVIEWS</a></li>
-        </ul>
+        <div class="topnav">
+            <!-- Centered link -->
+            <div class="topnav-centered">
+                <a href="#COVID-19 NEWS">COVID-19 NEWS CENTRAL</a></div>
+                
+            <!-- Left-aligned inks (default) -->
+            <a href="#DRUG NEWS">DRUG NEWS</a>
+            <a href="MEDICAL JOURNAL">MEDICAL JOURNAL</a>
+            
+            <!-- Right-aligned-links -->
+            <a href="MEDICAL WEBSITES">MEDICAL WEBSITES</a>
+            <a href="MEDICAL JOURNALS">MEDICAL JOURNALS</a>
+            </div>
+            
+        
+    
+            
+            
+            
 
         <h3 id="news-central">COVID-19 NEWS CENTRAL<img src="https://phil.cdc.gov//PHIL_Images/23312/23312_lores.jpg"alt="virus picture"width="100"></h3>
         
