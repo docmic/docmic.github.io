@@ -20,19 +20,22 @@
         .columncount{column-count:3;column-gap:10px;font-size:1.1em;line-height:1.3em}
         h3{font-size:1.5em;}
         
-        /* Centered section inside the top navigation */
-.topnav-centered a {
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
-}
+        .nav{
+            border:1px solid #ccc;
+            border-width:1px 0;
+            list-style:none;
+            margin:0;
+            padding:0;
+            text-align:center;
+        }
+        .nav li{
+            display:inline;
+        }
+        >nav a{
+            dispaly:inline-block;
+            padding:10px;
+        }
+        
 
 .topnav-centered a {
     position: relative;
@@ -46,27 +49,18 @@
     <STYLE>A {text-decoration: none;} </STYLE>
     <body>
         <h1 style="text-align:center">DrugReport</h1>
-        <div class="topnav">
-            <!-- Centered link -->
-            <div class="topnav-centered">
-                <a href="#COVID-19 NEWS">COVID-19 NEWS CENTRAL</a></div>
-                
-            <!-- Left-aligned inks (default) -->
-            <a href="#DRUG NEWS">DRUG NEWS</a>
-            <a href="MEDICAL JOURNAL">MEDICAL JOURNAL</a>
-            
-            <!-- Right-aligned-links -->
-            <a href="MEDICAL WEBSITES">MEDICAL WEBSITES</a>
-            <a href="MEDICAL JOURNALS">MEDICAL JOURNALS</a>
-            </div>
-            
         
-    
-            
-            
-            
-
-        <h3 id="news-central">COVID-19 NEWS CENTRAL<img src="https://phil.cdc.gov//PHIL_Images/23312/23312_lores.jpg"alt="virus picture"width="100"></h3>
+        <ul class="nav">
+            <li><a href="">COVID-19 NEWS</a></li>
+            <li><a href="#drug-news">DRUG NEWS</a></li>
+            <li><a href="drug-approvals">DRUG APPROVALS</a></li>
+            <li><a href="medical-websites">MEDICAL WEBSITES</a></li>
+            <li><a href="medical-journals">MEDICAL JOURNALS</a></li>
+            <li><a href="doctor-reviews">DOCTOR REVIEWS</a></li>
+        </ul>
+        
+        
+        <h3 id="news-central">COVID-19 NEWS<img src="https://phil.cdc.gov//PHIL_Images/23312/23312_lores.jpg"alt="virus picture"width="100"></h3>
         
         
         
@@ -158,7 +152,7 @@
             <a href="https://www.news18.com/news/world/modernas-covid-19-vaccine-worked-well-in-monkeys-says-study-2741181.html">Vaccine worked in monkeys</a>
         
         
-        <h3 class="line" class="subheading">DRUG NEWS<img style="padding-left:10px" src="https://medcitynews.com/wp-content/uploads/2018/10/GettyImages-889516078-600x400.jpg"alt="pills"width="80"></h3>
+        <h3 id="drug-news" class="line" class="subheading">DRUG NEWS<img style="padding-left:10px" src="https://medcitynews.com/wp-content/uploads/2018/10/GettyImages-889516078-600x400.jpg"alt="pills"width="80"></h3>
         <div class="columncount">
             <a href="https://thehill.com/policy/healthcare/511808-fda-warns-about-second-toxic-chemical-in-some-hand-sanitizers">FDA warns of 2nd toxic ingredient in hand sanitizers</a><br>
             <a href="https://www.wsj.com/articles/beset-by-coronavirus-health-authorities-brace-for-flu-season-11597316400">Health authorities bracing for flu season</a><br>
@@ -174,7 +168,7 @@
 
 </div>
 
-        <h3 class="line" class="subheading">NEW DRUG APPROVALS<img style="padding-left:10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmzi3eUrrWw2bWuUwOLzRClC5Qk2OxFAkTqg&usqp=CAU"width="80"></h3>
+        <h3 id="drug-approvals" class="line" class="subheading">DRUG APPROVALS<img style="padding-left:10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmzi3eUrrWw2bWuUwOLzRClC5Qk2OxFAkTqg&usqp=CAU"width="80"></h3>
         <div class="columncount">
             <a href="https://www.empr.com/home/news/lampit-approved-chagas-disease-trypanosoma-cruz/?utm_source=newsletter&utm_medium=email&utm_campaign=mpr-dailydose-hay-20200813&cpn=pharm,pharm_all,hospitalpharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&c_id=&email_hash=ee1bc198a3243426d7017ef95e94a3a8&dl=0&mpweb=1323-101958-4970145">Drug for Chagas disease in peds</a><br>
             <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-targeted-treatment-rare-duchenne-muscular-dystrophy-mutation">Treatment for Duchenne Muscular Dystrophy Mutation</a><br>
@@ -218,7 +212,7 @@
             </div>
 
 
-            <h3 class="line" class="subheading">MEDICAL JOURNALS<img style="padding-left:10px" src="https://alertandoriented.com/wp-content/uploads/2016/04/magazines-588346_1280-e1459965265774.jpg"alt="magazine"width="80"></h3>
+            <h3 id="medical-journals" class="line" class="subheading">MEDICAL JOURNALS<img style="padding-left:10px" src="https://alertandoriented.com/wp-content/uploads/2016/04/magazines-588346_1280-e1459965265774.jpg"alt="magazine"width="80"></h3>
         <div class="columncount">
             <a href="https://www.biomedcentral.com/">BioMed Central</a><br>
             <a href="http://www.freemedicaljournals.com/">Free Medical Journals</a><br>
@@ -229,7 +223,7 @@
         </div>
         
         
-        <h3 class="line" class="subheading">DOCTOR REVIEWS<img style="padding-left:10px" src="https://assets.caredash.com/image/PQNVgx_yT4ZNRAkB0DiQWUq1tVA=/fit-in/750x500/caredash-media/caredash/health-101/stay-informed/doctor-review-1-md.jpg"alt="doctor-review"width="80"></h3>
+        <h3 id="doctor-reviews" class="line" class="subheading">DOCTOR REVIEWS<img style="padding-left:10px" src="https://assets.caredash.com/image/PQNVgx_yT4ZNRAkB0DiQWUq1tVA=/fit-in/750x500/caredash-media/caredash/health-101/stay-informed/doctor-review-1-md.jpg"alt="doctor-review"width="80"></h3>
         <div class="columncount">
             <a href="https://www.caredash.com/">CareDash</a><br>
             <a href="https://www.castleconnolly.com/">Castle Connolly</a><br>
