@@ -16,8 +16,8 @@
         .linkspace{margin-left:20px;}
         #vaccine-treatment{margin-top:10px;margin-bottom:10px;}
         #tracker{margin-top:10px;margin-bottom:10px;}
-        #ceros {position:absolute; top:200px;}
-        #milken {position:absolute; top:200px; right:170px;}
+        #ceros {position:absolute; top:200px;z-index:-1;}
+        #milken {position:absolute; top:200px; right:170px; z-index:-1;}
         #map-image{margin-top:10px;}
         #tracker-image{margin-top:20px;}
         #vaccine-image{margin-top:20px;}
@@ -31,18 +31,16 @@
         h3{font-size:1.5em;}
         .text-center{text-align:center;}
         .image-center {display:block; margin-left:auto; margin-right: auto;margin-top:10px;margin-bottom:20px;}
-        .navbar{
-            position:fixe;
-            top:0;
-            
-            
-            
-            
+        .navbar{color:rgb(245, 233, 245);
+                    }
+        
+        .menu-color {color:rgb(232, 223, 232);
         }
         .nav{
             overflow:hidden;
             position:fixed;
-            
+            background-color:rgb(176, 174, 176);
+            color:rgb(245, 240, 245);
             width:100%;
             border:1px solid #ccc;
             border-width:1px 0;
@@ -59,10 +57,10 @@
             
             display:inline-block;
             padding:20px;
-            color:rgb(5, 0, 5);
+            color:rgb(247, 239, 247);
             font-size:1.2em;
         }
-        a:link {color:rgb(77, 60, 77);}
+        a:link {color:rgb(5, 0, 5);}
         .dosing{
             list-style:none;
             position:relative;
@@ -86,9 +84,9 @@
         </STYLE>
 
     <body>
-    <div class="navbar">
+    <div class="navbar" style="color:white">
         <h1 style="text-align:center">MedzLinc</h1>
-        <ul class="nav">
+        <ul class="nav" class="menu-color">
             <li style="font-size:1.4em">MedzLinc:</li>
             <li><a href="#covid-news">COVID (MAP/VACC/TMT)</a></li>
             <li padding:10px><a href="#drug-updates">DRUG UPDATES</a></li>
