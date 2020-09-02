@@ -11,37 +11,37 @@
         
         h2,h3,h4{margin-bottom:1px;text-align:center;}
         
-        #list{font-size:0.9em;}
-        
-        /*  THIN GRAY LINE  */
-        .line{border-top: 4px solid rgb(222, 222, 222);}
-        
-        /*  THICK BLACK LINE  */
-        .line-thick{border-top: 10px solid rgb(5, 0, 5);}
-        
-        /*  ???  */
-        .linkspace{margin-left:20px;}
-        
-        /*  POSITIONING FOR VACCINE AND TRATMENT HEADING  */
-        .vaccine-treatment{margin-top:10px;margin-bottom:10px;padding:5px;}
-        
-        /*  GIVE PADDING TO 'VACCINE TRACKER' 'COVID VIDEOS' 'DRUG APPROVALS' HEADING  */
-        .pad-space{margin-top:10px;margin-bottom:10px;padding:5px;}
+        /* hover over about */
+        .about_item {text-align:center;
+            font-size:25px;
+            margin-top:-10px;
+        }
+        .about_item hover {font-size: 0;}
+        .about_item hover: after {
+            content: attr(data-hover);
+            font-size:10px;
+            line-height:2px;}
 
+        #list{font-size:0.9em;}
+        .line{border-top: 2px solid rgb(222, 222, 222);}
+        .line-thick{border-top: 10px solid rgb(5, 0, 5);}
+        .linkspace{margin-left:20px;}
+        .vaccine-treatment{margin-top:10px;margin-bottom:10px;padding:5px;}
+        .pad-space{margin-top:10px;margin-bottom:10px;padding:5px;}
+        #tracker{margin-top:10px;margin-bottom:10px;}
         /*-- phase 1-3 chart */
         .guardian {left:0%; z-index:-1;}
         
-        /* NEWS FLASH BLINKER  (NOT USING IT NOW)
+        /* NEWS FLASH BLINKER
         #news-flash{color:red;font-size:1.5em;padding: 5px;}
         .blink-one {animation: blinker-one 1s linear infinite;  }       
         @keyframes blinker-one { 0% {opacity: 0;} }
         */
 
-        /* LIST OF TREATMENT MEDS - DECIDED NOT TO USE THIS
-	GO FROM BIG TO SMALL FONT IN SAME LINE
+        /* LIST OF TREATMENT MEDS */
         header {text-align:center;}
         header>h3 {display:inline-block;}
-        #list-font {font-size:1.3em;}  */
+        #list-font {font-size:1.3em;}
         
         
         /*-- COLUMN FOR vaccine & treatment */
@@ -49,27 +49,18 @@
         .five-column{float:left;width:20%;}
         .row:after {content:"";display:table;clear:both;}
         
-	/*MAP OF USA*/
         #map-image{margin-top:10px;}
-
-	/* PICURE OF VACCINE – DELETED */
+        #tracker-image{margin-top:20px;}
         #vaccine-image{margin-top:20px;}
-
-/* POSITION  OF COVID NEWS HEADING */
+        #map{margin-bottom:10px;}
         .heading    {margin-top:10px;margin-bottom:10px;line-height:0em;}
-
-/* POSITIONING OF SUBHEADINGS  */
         .subheading {margin-top:10px;margin-bottom:10px;line-height:0em;font-size:1.5em;}
-
-	/*  POSITIONING FOR COVID NEWS HEADLINE  */
         #news-central{margin-top:50px;}
-
-	/* NUMBER OF COLUMNS IN EACH SECTION  */
         .three-columncount{column-count:3;column-gap:10px;font-size:1.1em;line-height:1.3em;}
         .five-columncount{column-count:5;column-gap:10px;font-size:1.1em;line-height:1.3em;}
         .four-columncount{column-count:4;column-gap:10px;font-size:1.1em; line-height:1.3em;}
         h3{font-size:1.5em;}
-
+        .text-center{text-align:center;}
         .image-center {display:block; margin-left:auto; margin-right: auto;margin-top:10px;margin-bottom:20px;}
         
         /* MAP TITLE world/state */
@@ -135,8 +126,7 @@
             <div id="medzlinc" style="font-size:2em">MedzLinc</div>
             <a href="#covid-news">COVID-VACCINE/TREATMENT/MAP</a>
             <li padding:10px><a href="#drug-updates">DRUG UPDATES</a></li>
-            <li padding:10px><a href="#drug-dosing">DRUG DOSING</a></li>
-            <li padding:10px><a href="#drug-interaction/coupon">DRUG INTERACTION/COUPONS</a></li>
+            <li padding:10px><a href="#drug-reference">DRUG REFERENCE</a></li>
             <li><a href="#drug-approvals">DRUG APPROVALS</a></li>
             <li><a href="#medical-websites">MEDICAL WEBSITES</a></li>
             <li><a href="#doctor-reviews">MD REVIEWS</a></li>
@@ -145,6 +135,7 @@
         <!-- MAIN TITLE -->
         <h4>&nbsp</h4>
         <h1 id="medzlinc-font" style="text-align:center">MedzLinc</h1>
+        <div class="about_item" data-hover="Your link to COVID and pharmacy information">About</div>
     
     
         <!-- COVID NEWS -->
@@ -176,21 +167,20 @@
                 <a href="https://www.bio.org/policy/human-health/vaccines-biodefense/coronavirus/pipeline-tracker">Bio</a><br>
                 <a href="https://www.contagionlive.com/news/the-covid19-live-vaccine-tracker">ContagionLive</a><br>
                 <a href="https://www.livemint.com/topic/coronavirus-vaccine-tracker">Livemint</a><br>
-		<a href="https://www.covid-19vaccinetracker.org/">Milken: Leaders</a><br>
+                <a href="https://thevaccinetracker.com/">Vaccine tracker</a><br>
             </div>
             <!-- COLUMN 2 TRACKER-->
             <div class="five-column">
                 <a href="https://biorender.com/covid-vaccine-tracker">Biorender</a><br>
                 <a href="https://www.covid-19vaccinetracker.org/">COVID-19 vaccine</a><br>
                 <a href="https://vac-lshtm.shinyapps.io/ncov_vaccine_landscape/">London School HTM</a><br>
-                <a href="https://thevaccinetracker.com/">Vaccine tracker</a><br>
+                <a href="https://www.washingtonpost.com/graphics/2020/health/covid-vaccine-update-coronavirus/">WaPost</a><br>
             </div>
             <!-- COLUMN 3 TRACKER-->
             <div class="five-column">
                 <a href="https://www.bloomberg.com/features/2020-coronavirus-drug-vaccine-status/">Bloomberg</a><br>
                 <a href="https://covidvax.news/progress/">Covidax</a><br>
                 <a href="https://www.nytimes.com/interactive/2020/science/coronavirus-vaccine-tracker.html">NYT</a><br>
-		<a href="https://www.washingtonpost.com/graphics/2020/health/covid-vaccine-update-coronavirus/">WaPost</a><br>
             </div>
             <!-- COLUMN 4 TRACKER -->
             <div class="five-column">
@@ -212,35 +202,32 @@
         <!-- COVID VACCINE UPDATE -->
         <h4></h4>
         <h4></h4>
-        <!--<img class="image-center" id="vaccine-image" style="padding-left:10px" src="https://s2.reutersmedia.net/resources/r/?m=02&d=20200504&t=2&i=1517402692&r=LYNXMPEG4315G&w=1280"alt="vaccine"width="150">-->
+        <img class="image-center" id="vaccine-image" style="padding-left:10px" src="https://s2.reutersmedia.net/resources/r/?m=02&d=20200504&t=2&i=1517402692&r=LYNXMPEG4315G&w=1280"alt="vaccine"width="150">
         <h3 class="vaccine-treatment" class="subheading">COVID Vaccine Update</h3>
         <div class="row" style="font-size:1.2em">
             <!--    Column 1 VACCINE UPDATE   -->
             <div class="column">
-                <a href="https://www.upi.com/Top_News/US/2020/08/30/FDA-willing-to-fast-track-COVID-19-vaccine-as-US-nears-6-million-cases/9411598809091/"><img src="https://cdnph.upi.com/svc/sv/upi/9411598809091/2020/1/c59f28cd70e2f7b5a22d7d75b9293226/FDA-willing-to-fast-track-COVID-19-vaccine-as-US-nears-6-million-cases.jpg" alt="fast-rack" width="300"><br>FDA may fast track vaccine: risk versus benefit</a><br>
+                <a href="https://www.usnews.com/news/top-news/articles/2020-08-28/sinovacs-coronavirus-vaccine-candidate-approved-for-emergency-use-in-china-source">Sinovac-emgergency use in China</a><br>
                 <a href="https://www.cnbc.com/2020/08/26/moderna-says-its-coronavirus-vaccine-shows-promising-results-in-small-trial-of-elderly-patients.html">Moderna vaccine-promising results for seniors</a><br>
                 <a href="https://www.usnews.com/news/top-news/articles/2020-08-25/oxford-covid-vaccine-data-could-go-before-regulators-this-year-director">Oxford vacc data to feds this year?</a><br>
+                <a href="https://www.theguardian.com/australia-news/2020/aug/20/heres-everything-you-need-to-know-about-the-potential-oxford-university-covid-vaccine">Oxford U vacc-looks promising August 19</a><br>
                 <a href="https://www.usnews.com/news/top-news/articles/2020-08-16/curevac-doesnt-rule-out-accelerated-approval-for-covid-19-vaccine">CureVac to pursue possible early approval</a><br>
                 <a href="https:/    /www.news18.com/news/world/scientists-are-optimistic-about-new-vaccine-studies-from-novavax-2760925.html">Optimism over Novavax vaccine</a><br>
             </div>
             <!--    Column 2  VACCINE UPDATE -->
             <div class="column">
-                <a href="https://www.medpagetoday.com/infectiousdisease/covid19/88404"><img src="https://clf1.medpagetoday.net/media/images/88xxx/88404.jpg"alt="crowd" width="300"><br>Frontline healthcare workers get first shot</a><br>                
-                <a href="https://www.nationalacademies.org/news/2020/09/national-academies-release-draft-framework-for-equitable-allocation-of-a-covid-19-vaccine-seek-public-comment">Draft Guidelines for vaccine distribution</a><br>                                                                                                                              
-                <a href="https://www.cbsnews.com/news/covid-19-vaccine-oxford-american-trial/">1st American to try Oxford vaccine</a><br>
-                <a href="https://www.wsj.com/articles/for-covid-19-vaccine-j-j-plans-60-000-subject-pivotal-trial-11597936496">J&J 60k subjects + making of COVID vaccine video</a><br>
+                <a href="https://www.wsj.com/articles/for-covid-19-vaccine-j-j-plans-60-000-subject-pivotal-trial-11597936496">J&J plans 60,000 subjects trial</a><br>
+                <a href="https://www.msn.com/en-gb/health/medical/here-are-the-most-promising-coronavirus-vaccine-candidates-out-there/ar-BB184JCf">Most promising vaccines</a><br>
                 <a href="https://www.cbsnews.com/news/covid-vaccine-prediction-fda-approval-goldman-coronavirus-this-year/">Vaccine possible this year</a><br>
-                <a href="https://www.webmd.com/lung/news/20200515/pfizer-says-covid-19-vaccine-could-arrive-in-october">
-                                                                                                                       <!--Vaccine may arrive in October<br><img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/news/2015/02_2015/flu_vaccine/650x350_flu_vaccine.jpg"width="300">-->
-                                                                                                                       </a><br>
+                <a href="https://www.empr.com/home/news/drugs-in-the-pipeline/covid19-vaccine-candidate-results-cov001-chadox1/?utm_source=newsletter&utm_medium=email&utm_campaign=mpr-dailydose-hay-20200730&cpn=pharm,pharm_all,hospitalpharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&c_id=&email_hash=ee1bc198a3243426d7017ef95e94a3a8&dl=0&mpweb=1323-99808-4970145">Early data show vaccine is safe</a><br>
+               <a href="https://www.webmd.com/lung/news/20200515/pfizer-says-covid-19-vaccine-could-arrive-in-october">Vaccine may arrive in October</a><br>
             </div>
             <!--    Column 3   VACCINE UDPATE  -->
             <div class="column">
-                <a href="https://www.insurancejournal.com/news/international/2020/08/31/580807.htm"><img src="https://www.insurancejournal.com/app/uploads/2020/08/vaccine-injection-bloomberg-580x392.jpg" width="300"><br>Britain may fast track vaccine</a><br>
                 <a href="https://news.yahoo.com/unmc-chancellor-says-covid-19-223735976.html">U of Nebraska: vaccine for this Fall</a><br>
                 <a href="https://www.marketwatch.com/story/curevac-and-eu-in-advanced-talks-for-225-million-covid-19-vaccine-doses-2020-08-20">CureVac ready by mid 2021</a><br>
+                <a href="https://www.nature.com/articles/d41586-020-02400-7">Good prospect for vaccine</a><br>
                 <a href="https://www.statnews.com/2020/07/30/a-huge-experiment-how-the-world-made-so-much-progress-on-a-covid-19-vaccine-so-fast/">How the world made so much progress so quickly</a><br>
-                <a href="https://www.statnews.com/2020/08/20/pfizer-biontech-favored-covid19-vaccine-has-fewer-side-effects-than-first-one/">Pfizer/BionTech's chosen vaccine has fewer side effects</a><br>
                 <a href="https://www.news18.com/news/world/bcg-vaccine-safe-does-not-lead-to-increased-risk-of-covid-19-symptoms-scientists-say-2766483.html">BCG vaccine is safe, good</a><br>
             </div>
         </div>
@@ -256,31 +243,34 @@
 </header>
 
         <div class="row" style="font-size:1.2em">
-            <!--    Column 1  COVID TREATMENT UPDATE -->
+            <!--    Column 1  TREATMENT  -->
             <div class="column">
-                <a href="https://wsvn.com/news/local/miami-dade/new-treatment-created-by-miami-doctors-proves-promising-to-save-covid-19-patients-lives/">Organicell: promising new treatment by Miami doctors</a><br>
-                <a href="https://www.foxnews.com/health/inhaled-drug-coronavirus-treatment-interferon-beta">Inhaled interferon as a treatment</a><br>    
                 <a href="https://www.uspharmacist.com/article/new-study-bolsters-concept-that-famotidine-can-be-helpful-in-covid19/?wc_mid=6220:617759&wc_rid=6220:6857298">Pepcid may be protective for COVID</a><br>
                 <a href="https://www.ibtimes.com/coronavirus-treatment-blood-pressure-medicines-may-reduce-covid-19-severity-deaths-3033913">Blood pressure med improve COVID</a><br>
                 <a href="https://nypost.com/2020/08/03/next-big-covid-19-treatment-may-be-manufactured-antibodies/">Next big treatment is manufactured antibodies</a><br>
+                <a href="https://www.africanews.com/2020/05/27/covid-19-treatment-algeria-to-continue-using-hydroxychloroquine//">Algeria's success with hydroxychloroquine</a><br>
                 <div style="font-weight:bold">Latest treatment guidelines: <a href="https://www.covid19treatmentguidelines.nih.gov/whats-new/">NIH</a>&nbsp&&nbsp  
 <a href="https://www.goodrx.com/blog/coronavirus-treatments-on-the-way/">GoodRx</a></div>
             </div>
-            <!--    Column 2   COVID TREATMENT UPDATE-->
+            <!--    Column 2   TREATMENT -->
             <div class="column">
                 <a href="https://www.wsj.com/articles/abbotts-5-covid-19-rapid-antigen-test-gets-emergency-use-status-from-fda-11598485933"><img src="https://m.wsj.net/video/20200723/072320testingmessage/072320testingmessage_960x540.jpg" alt="abbot-test" width="300"><br>Emergency Use for Abbott's COVID test</a><br>
+                <a href="https://www.nhregister.com/news/article/Yale-study-Men-and-women-may-need-different-15522162.php">Yale: gender differences in COVID treatment?</a><br>
+
                 <a href="https://www.empr.com/home/news/drugs-in-the-pipeline/tradipitant-vanda-neurokinin-1-receptor-pneumonia-covid-19-phase-3/?utm_source=newsletter&utm_medium=email&utm_campaign=mpr-dailydose-hay-20200820&cpn=pharm,pharm_all,hospitalpharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&c_id=&email_hash=ee1bc198a3243426d7017ef95e94a3a8&dl=0&mpweb=1323-102437-4970145">Experimental drug for COVID patient with pneumonia</a><br>
                 <a href="https://www.mcclatchydc.com/news/coronavirus/article244247727.html">Possible new treatment by this Fall</a><br>
                 <a href="https://www.covid19treatmentguidelines.nih.gov/immune-based-therapy/immunomodulators/corticosteroids/">Corticosteroid treatment</a><br>
+                <a href="https://www.empr.com/home/news/high-dose-vitamin-c-for-coronavirus-covid19-sars-cov-2/">Vitamin C IV linked to recovery</a><br>
             </div>
-            <!--    Column 3   COVID TREATMENT UPDATE-->
+            <!--    Column 3   TREATMENT -->
             <div class="column">
-                <a href="https://thehill.com/policy/healthcare/514243-fda-expands-use-of-remdesivir-as-covid-19-treatment"><img src="https://thehill.com/sites/default/files/styles/thumb_small_article/public/ca_remdesivirphase2_052720getty_0.jpg?itok=I3w2zuHI" alt="remdesivir" width="300"><br>FDA includes remdesivir for COVID emergency use</a><br>
-                <a href="https://www.empr.com/home/news/remdesivir-emergency-use-disorder-eua-covid-19-coronavirus/?utm_source=newsletter&utm_medium=email&utm_campaign=mpr-dailydose-hay-20200831&cpn=pharm,pharm_all,hospitalpharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&c_id=&email_hash=ee1bc198a3243426d7017ef95e94a3a8&dl=0&mpweb=1323-103668-4970145?>Remdesivir to include all hospitalized COVID patients</a><br>
+                <a href="https://thehill.com/policy/healthcare/514243-fda-expands-use-of-remdesivir-as-covid-19-treatment"><img src="https://thehill.com/sites/default/files/styles/thumb_small_article/public/ca_remdesivirphase2_052720getty_0.jpg?itok=I3w2zuHI" alt="remdesivir" width="300"><br>FDA - include remdesivir for COVID emergency use</a><br>
                 <a href="https://www.wbaltv.com/article/researchers-hope-this-old-fashioned-treatment-will-work-for-coronavirus-1/33634137">Convalescent plasma therapy</a><br>
                 <a href="https://www.ibtimes.com/doctors-studying-multiple-sclerosis-drug-covid-19-treatment-3024328">MS drug as possible treatment</a><br>
                 <a href="https://www.firstpost.com/health/russian-researchers-claim-disulfiram-a-drug-used-to-treat-alcoholism-may-be-effective-against-covid-19-8679411.html">Alcoholism drug may be effective</a><br>
                 <a href="https://www.medscape.com/viewarticle/931064">Remdesivir shortens COVID-19</a><br>
+                <a href="https://abc7chicago.com/coronavirus-treatment-hyperbaric-oxygen-therapy-covid-19-update-new-york-university/6347301/">Hyperbaric oxygen treatment</a>
+                
             </div>
         </div>
             
@@ -305,16 +295,17 @@
             <div class="column">
                 <a href="https://news.yahoo.com/unmc-chancellor-says-covid-19-223735976.html">U of Nebraska: vaccine this Fall</a><br>
                 <a href="https://www.youtube.com/watch?v=KCrTKFQwdGY">Inovio's fast progress</a><br>
+                <a href="https://abc7news.com/covid-19-vaccine-astrazeneca-trials-for-coronavirus-shot-moderna/6369641/">Bay area volunteers for trail</a><br>
                 <a href="https://www.youtube.com/watch?v=wMaDC-AggtE">Convalescent Blood Plasma Treatment</a><br>
                 <a href="https://www.youtube.com/watch?v=zr5uN32mkhU">4 phases of clinical trials</a><br>
 
             </div>
             <!-- COLLUMN 3 COVID VIDEOS-->
             <div class="column">
-                <a href="https://www.youtube.com/watch?v=qb-D5tG3Vdw" target="_blank">The making of COVID vaccine</a><br>
                 <a href="https://www.foxnews.com/health/fda-pauses-emergency-authorization-blood-plasma-coronavirus-treatment-report">FDA wants more evidence for blood plasma treatment</a><br>
                 <a href="https://www.youtube.com/watch?v=0FPJx1kT3J4">Global race for vaccine</a><br>
                 <a href="https://www.wsj.com/articles/eu-secures-coronavirus-vaccine-deal-with-astrazeneca-11597418453">EU has vaccine deal with AstraZeneca</a><br>
+                <a href="https://www.youtube.com/watch?v=sWMQrEO5GRs">Vaccine trials in Arizona</a><br>
             </div>
         </div> 
 
@@ -330,17 +321,17 @@
         <div class="five-columncount">
         <!--LIST OF WORLD NATION-->
         <div class="world-state" style="font-size:1.2em">World/National:</div>
+            <a href="https://coronavirus.jhu.edu/map.html">Johns Hopkins</a><br>
+            <a href="https://storymaps.arcgis.com/stories/4fdc0d03d3a34aa485de1fb0d2650ee0">Pandemic</a><br>
             <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a><br>
             <a href="https://www.cdc.gov/covid-data-tracker/#cases">CDC map</a><br>
             <a href="https://www.cdc.gov/nchs/nvss/vsrr/covid_weekly/index.htm#AgeAndSex">CDC:age</a><br>
-            <a href="https://covidtracking.com/data">Covid tracker</a><br>											 
+            <a href="https://covidtracking.com/data">Covid tracker</a><br>
+            <a href="https://www.worldometers.info/coronavirus/country/us/">Worldometer</a><br>
             <a href="https://coronavirususamap.com/">Coronavirus USA MAP</a><br>
-            <a href="https://coronavirus.jhu.edu/map.html">Johns Hopkins</a><br>
-            <a href="https://storymaps.arcgis.com/stories/4fdc0d03d3a34aa485de1fb0d2650ee0">Pandemic</a><br>							  
             <a href="https://www.statnews.com/feature/coronavirus/covid-19-tracker/">Statnews</a><br>
             <a href="https://uscovid-19map.org/">Time-lapse by county</a><br>
             <a href="https://www.acsh.org/news/2020/06/23/coronavirus-covid-deaths-us-age-race-14863">By age/race</a><br>
-            <a href="https://www.worldometers.info/coronavirus/country/us/">Worldometer</a><br>												     
             <div>&nbsp</div>
             <div class="world-state" style="font-size:1.2em">States:</div>
             <a href="https://www.alabamapublichealth.gov/covid19/index.html">Alabama</a><br>
@@ -364,7 +355,7 @@
             <a href="https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus/data.shtml">Maine</a><br>
             <a href="https://coronavirus.maryland.gov/">Maryland</a><br>
             <a href="https://www.wbur.org/commonhealth/2020/03/09/coronavirus-cases-massachusetts-map">Massachusetts</a><br>
-            <a href="https://www.bridgemi.com/michigan-coronavirus-dashboard-cases-deaths-and-maps">Michigan</a><br>
+            <a href="https://www.michigan.gov/Coronavirus">Michigan.gov</a>&nbsp&nbsp<a href="https://www.bridgemi.com/michigan-coronavirus-dashboard-cases-deaths-and-maps">bridgemi.com</a><br>
             <a href="https://www.health.state.mn.us/diseases/coronavirus/situation.html">Minnesota</a><br>
             <a href="https://msdh.ms.gov/msdhsite/_static/14,21882,420,873.html">Mississippi</a><br>
             <a href="https://missouri-coronavirus-gis-hub-mophep.hub.arcgis.com/">Missouri</a><br>
@@ -420,10 +411,10 @@
                 <a href="https://www.wsj.com/articles/beset-by-coronavirus-health-authorities-brace-for-flu-season-11597316400">Health authorities bracing for flu season</a><br>
                 <a href="https://www.pulmonologyadvisor.com/home/topics/copd/metered-cryospray-improves-outcomes-in-chronic-bronchitis-in-copd/?utm_source=newsletter&utm_medium=email&utm_campaign=pulm-promo-hay-20200812&cpn=pharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&email_hash=ee1bc198a3243426d7017ef95e94a3a8&mpweb=1323-101745-4970145">Metered cryospray improves bronchitis</a><br>
                 <a href="https://www.pharmacytimes.com/news/untreated-shingles-may-increase-risk-of-dementia">Untreated shingles may increase dementia risk</a><br>
-                <a href="https://www.uspharmacist.com/article/greater-antibiotic-use-increases-risk-of-inflammatory-bowel-disease/?wc_mid=6220:617759&wc_rid=6220:6857298">Antibiotic overuse risks IBD</a><br>
             </div>
             <!--    COLUMN 3 DRUG UPDATES   -->
             <div class="column">
+                <a href="https://www.uspharmacist.com/article/greater-antibiotic-use-increases-risk-of-inflammatory-bowel-disease/?wc_mid=6220:617759&wc_rid=6220:6857298">Antibiotic overuse risks IBD</a><br>
                 <a href="https://www.empr.com/home/mpr-first-report/ats-virtual-program-2020/triple-combination-therapy-improves-long-term-lung-function-in-copd/?utm_source=newsletter&utm_medium=email&utm_campaign=mpr-spotlight-hay-20200815&cpn=pharm,pharm_all,hospitalpharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&c_id=&email_hash=ee1bc198a3243426d7017ef95e94a3a8&dl=0&mpweb=1323-102107-4970145">Triple combo therapy improves COPD</a><br>
                 <a href="https://jamanetwork.com/journals/jama/article-abstract/2769254">Trends in biotin use</a><br>
                 <a href="https://www.endocrinologyadvisor.com/home/topics/cardiovascular-and-metabolic-disorders/bempedoic-acid-safe-and-effective-at-lowering-ldl-c-in-hypercholesterolemia/?utm_source=newsletter&utm_medium=email&utm_campaign=ea-update-hay-20200811&cpn=pharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&email_hash=ee1bc198a3243426d7017ef95e94a3a8&mpweb=1323-101526-4970145">Bempedoic acid lowers LDL-C</a><br>
@@ -431,35 +422,18 @@
                 <a href="https://www.medscape.com/viewarticle/935638">Minoxidil improved hair loss after radiation</a>
             </div>
         </div> 
-                                                                     
-        <h3 class="line"></h3> 
-        <!-- DRUG DOSING  -->                            
-        <h3 id="drug-dosing" class="maintitle-font" id="drug-news" class="subheading" style="font-size:1.2em">DRUG DOSING</h3>
-        <h4>&nbsp</h4>                                                                                                                                                                                                            
-        <div class="row" style="font-size:1.2em">                                                                                                                
-           <div class="five-column">
-            <a href="https://www.stlouischildrens.org/health-resources/dosage-tables/acetaminophen-tylenol-dosage-table"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4L35A8gyvyxkakn0BuJytwuojYcG6kukTVw&usqp=CAU" alt="tylenol" width="150"><br>Tylenol Dosing</a><br>
-           </div>
-           <div class="five-column">
-            <a href="https://www.healthychildren.org/English/safety-prevention/at-home/medication-safety/Pages/Ibuprofen-for-Fever-and-Pain.aspx"><img src="https://images.albertsons-media.com/is/image/ABS/960538061?$ecom-product-card-desktop-jpg$&defaultImage=Not_Available" alt="motrin" width="150"><br>Advil/Motrin Dosing</a><br>
-           </div>
-           <div class="five-column">
-            <a href="https://www.stlouischildrens.org/health-resources/dosage-tables/diphenhydramine-benadryl-dosage-table"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdVfEYEp7SUfQzNaXHh3SKo9pWRQ6bbaCGuw&usqp=CAU" alt="benadryl" width="150"><br>Benadryl Dosing</a><br>
-         </div>
-         <div class="five-column">
-            <a href="https://www.stlouischildrens.org/health-resources/dosage-tables/loratadine-claritin-dosage-table"><img style="margin-top:15px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTuS5ZzCFcfQe9JV8HSF2Iy566FlViwoacwIw&usqp=CAU" alt="claritin" width="125"><br>Claritin Dosing</a><br>
-         </div>
-         <div class="five-column">
-            <a href="https://www.stlouischildrens.org/health-resources/dosage-tables/cetirizine-zyrtec-dosage-table"><img style="margin-top:20px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTDLim_xrfcTypIcK5zckp6wjYnnHyKpD-RBw&usqp=CAU" width="200"><br>Zyrtec Dosing</a><br>
-          </div>
-      </div>
-      <h3>&nbsp</h3>      
-      <h3 class="line"></h3>    
-                      
-                      
-        <!-- DRUG INTERACTION/COUPON -->
-        <h3 id="drug-interaction/coupon" class="maintitle-font" id="drug-news" class="subheading" style="font-size:1.2em">DRUG INTERACTION/COUPONS</h3>
-        <div class="five-columncount" id="drug-news">        
+
+        <ul class="dosing">
+            
+        </ul>
+        
+        <!-- DRUG REFERENCE -->
+        <h3 id="drug-reference" class="maintitle-font" id="drug-news" class="subheading" style="font-size:1.2em">DRUG REFERENCE</h3>
+        <div class="five-columncount" id="drug-news">
+            <a href="https://www.stlouischildrens.org/health-resources/dosage-tables/acetaminophen-tylenol-dosage-table">Tylenol Dosing</a><br>
+            <a href="https://www.healthychildren.org/English/safety-prevention/at-home/medication-safety/Pages/Ibuprofen-for-Fever-and-Pain.aspx">Advil Dosing</a><br>
+            <a href="https://www.stlouischildrens.org/health-resources/dosage-tables/diphenhydramine-benadryl-dosage-table">Benadryl Dosing</a><br>
+            <a href="https://www.stlouischildrens.org/health-resources/dosage-tables/loratadine-claritin-dosage-table">Claritin Dosing</a><br>
             <a href="https://www.webmd.com/interaction-checker/default.htm">WebMD drug interaction</a><br>
             <a href="https://www.drugs.com/drug_interactions.html">drugs.com drug interaction</a><br>
             <a href="https://www.rxlist.com/drug-interaction-checker.htm">RxList drug interaction</a><br>
@@ -495,11 +469,13 @@
             <!-- COLUMN 3 DRUG APPROVALS  -->
             <div class="column">
                 <a href="https://www.endocrinologyadvisor.com/home/topics/diabetes/qutenza-capsaicin-approved-pain-diabetic-peripheral-neuropathy-of-feet/?utm_source=newsletter&utm_medium=email&utm_campaign=ea-update-hay-20200812&cpn=pharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&email_hash=ee1bc198a3243426d7017ef95e94a3a8&mpweb=1323-101906-4970145">Capsaicin patch -diabetic peripheral neuropathy of the feet</a><br>
+                 <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-opioid-intravenous-use-hospitals-other-controlled-clinical-settings">New opioid (oliceridine) for IV use in clinical settings</a><br>
                  <a href="https://www.empr.com/home/news/lampit-approved-chagas-disease-trypanosoma-cruz/?utm_source=newsletter&utm_medium=email&utm_campaign=mpr-dailydose-hay-20200813&cpn=pharm,pharm_all,hospitalpharm_all&hmSubId=&hmEmail=1Can7tf2lidGNd1890-2vXAl9ziVP1G70&NID=1023382884&c_id=&email_hash=ee1bc198a3243426d7017ef95e94a3a8&dl=0&mpweb=1323-101958-4970145">Drug for Chagas disease in peds</a><br>
                 <a href="https://www.oncnet.com/news/fda-approves-pembrolizumab-patients-cutaneous-squamous-cell-carcinoma?hmpid=bWljaGFlbGNodW5nQG5lby5yci5jb20=">Pembrolizumab for cutaneous squamous cell carcinoma</a><br>
                 <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-oral-treatment-spinal-muscular-atrophy">Risdiplam approved for spinal macular atrophy</a><br>
-        </div>
-            </div> 
+                <a href="https://www.businesswire.com/news/home/20200805006105/en/FDA-Approves-GSK’s-BLENREP-belantamab-mafodotin-blmf-Treatment">Belantamab mafodotin-blmf for multiple myeloma</a><br>
+</div>
+        </div> 
         
         
         <!-- MEDICAL WEBSITES -->
@@ -552,4 +528,6 @@
         
     </body>
 </html>
+
+
 
