@@ -32,6 +32,21 @@
 	<meta charset="utf-8">
         <title>MedzLinc</title>
               
+	    <script>
+var xPositions = [100, 300];
+var yPositions = [200, 200];
+
+var drawStars = function() {
+    background(9, 5, 59);
+    imageMode(CENTER);
+    for (var i = 0; i < yPositions.length; i++) {
+        image(getImage("space/star"), xPositions[i], yPositions[i], 30, 30);
+    }
+};
+
+drawStars();
+</script>
+	    
     <style>
         h1{ font-size:4em;color:rgb(66, 60, 66);
             margin-bottom:5px;
@@ -235,20 +250,7 @@
 	
 </div>
 	  
-<script>
-var xPositions = [100, 300];
-var yPositions = [200, 200];
 
-var drawStars = function() {
-    background(9, 5, 59);
-    imageMode(CENTER);
-    for (var i = 0; i < yPositions.length; i++) {
-        image(getImage("space/star"), xPositions[i], yPositions[i], 30, 30);
-    }
-};
-
-drawStars();
-</script>
 	  
     <h4 class="line"></h4> 
         
